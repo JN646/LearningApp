@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Test Page</title>
+    <!-- Latest compiled and minified CSS -->
+    <meta http-equiv="X-UA-Compatible" content="IE=11">
+    <!-- Latest compiled and minified CSS -->
+    <link href="bootstrap.min1.css" rel="stylesheet" />
+</head>
+<body>
+        <!-- TemplateBeginEditable name="Title" -->Title<!-- TemplateEndEditable -->
+        <div class="container">
+            <div class="row"><!-- TemplateBeginEditable name="Header" -->
+            <h1>Learning Application</h1>
+            <div class="jumbotron jumbotron-fluid">
+              <h1 class="display-3">Hello, world!</h1>
+              <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+              <hr class="my-2">
+              <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+              <p class="lead"> <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a> </p>
+            </div>
+            <!-- TemplateEndEditable --></div>
+            <div class="row">
+                <!-- TemplateBeginEditable name="EditRegion3" --><div class="col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                        <img src="images/placeholder.svg" />
+                        <div class="caption">
+                            <h3>Introduction</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eu mi vel tortor maximus vulputate eu eget lorem. Aliquam erat volutpat. Vivamus pulvinar justo a tortor eleifend pharetra. Aliquam imperdiet velit a orci pellentesque, sed sollicitudin sapien gravida. Vivamus ultricies libero a justo congue, ac tristique nisl feugiat. Sed egestas felis a sagittis iaculis. Etiam quis est nec augue congue pulvinar. Aliquam luctus erat a nisl fermentum tempor.</p>
+                        </div>
+                    </div>
+                </div><!-- TemplateEndEditable -->
+              <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                        <img src="images/placeholder.svg" />
+                        <div class="caption">
+                            <h3>Content</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eu mi vel tortor maximus vulputate eu eget lorem. Aliquam erat volutpat. Vivamus pulvinar justo a tortor eleifend pharetra. Aliquam imperdiet velit a orci pellentesque, sed sollicitudin sapien gravida. Vivamus ultricies libero a justo congue, ac tristique nisl feugiat. Sed egestas felis a sagittis iaculis. Etiam quis est nec augue congue pulvinar. Aliquam luctus erat a nisl fermentum tempor.</p>
+                        </div>
+                  </div>
+                <!-- TemplateBeginEditable name="EditRegion2" -->EditRegion2<!-- TemplateEndEditable -->                </div>
+                <div class="col-sm-6 col-md-4"><!-- TemplateBeginEditable name="EditRegion1" -->EditRegion1<!-- TemplateEndEditable -->
+                    <div class="thumbnail">
+                        <img src="images/placeholder.svg" />
+                        <div class="caption">
+                            <h3>Features</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eu mi vel tortor maximus vulputate eu eget lorem. Aliquam erat volutpat. Vivamus pulvinar justo a tortor eleifend pharetra. Aliquam imperdiet velit a orci pellentesque, sed sollicitudin sapien gravida. Vivamus ultricies libero a justo congue, ac tristique nisl feugiat. Sed egestas felis a sagittis iaculis. Etiam quis est nec augue congue pulvinar. Aliquam luctus erat a nisl fermentum tempor.</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+</div>
+</body>
+</html>

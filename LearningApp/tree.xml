@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<Home>
+	<Music>
+		<GCSE>Home</GCSE>
+		<AS>Home</AS>
+		<A2>Home</A2>
+	</Music>
+	<Music_Technology>
+		<GCSE>Home</GCSE>
+		<AS>Home</AS>
+		<A2>Home</A2>
+	</Music_Technology>
+	<Grades>
+    <Grade1>Home</Grade1>
+    <Grade2>Home</Grade2>
+    <Grade3>Home</Grade3>
+    <Grade4>Home</Grade4>
+    <Grade5>Home</Grade5>
+    <Grade6>Home</Grade6>
+    <Grade7>Home</Grade7>
+    <Grade8>Home</Grade8>
+	</Grades>
+  <Curriculum>
+    <KS2>Home</KS2>
+    <KS3>Home</KS3>
+  </Curriculum>
+</Home>
