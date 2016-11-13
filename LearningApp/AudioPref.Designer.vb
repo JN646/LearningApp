@@ -51,7 +51,7 @@ Partial Class AudioPref
         Me.MetroTabControl1.Location = New System.Drawing.Point(0, 0)
         Me.MetroTabControl1.Name = "MetroTabControl1"
         Me.MetroTabControl1.SelectedIndex = 0
-        Me.MetroTabControl1.Size = New System.Drawing.Size(382, 223)
+        Me.MetroTabControl1.Size = New System.Drawing.Size(382, 209)
         Me.MetroTabControl1.TabIndex = 22
         Me.MetroTabControl1.UseSelectable = True
         '
@@ -92,7 +92,7 @@ Partial Class AudioPref
         Me.MetroTabPage1.HorizontalScrollbarSize = 10
         Me.MetroTabPage1.Location = New System.Drawing.Point(4, 38)
         Me.MetroTabPage1.Name = "MetroTabPage1"
-        Me.MetroTabPage1.Size = New System.Drawing.Size(374, 181)
+        Me.MetroTabPage1.Size = New System.Drawing.Size(374, 167)
         Me.MetroTabPage1.TabIndex = 0
         Me.MetroTabPage1.Text = "MetroTabPage1"
         Me.MetroTabPage1.VerticalScrollbarBarColor = True
@@ -202,7 +202,7 @@ Partial Class AudioPref
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(382, 223)
+        Me.ClientSize = New System.Drawing.Size(382, 209)
         Me.ControlBox = False
         Me.Controls.Add(Me.MetroTabControl1)
         Me.MaximizeBox = False

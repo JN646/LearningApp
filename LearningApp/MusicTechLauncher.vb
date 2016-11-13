@@ -238,17 +238,17 @@ Public Class MusicTechLauncher
         ' Set App name and version number
         If AdminMode = 1 Then
             ForeColor = Color.Red
-            Text = "Learning Application " + ProductVersion + " [ADMIN MODE]"
+            Text = "Learning Application - " + ProductVersion + " [ADMIN MODE]"
         Else
             ForeColor = Color.Black
-            Text = "Learning Application " + ProductVersion
+            Text = "Learning Application - " + ProductVersion
         End If
     End Sub
     Public Sub PerformZoom(ByVal Value As Integer)
         Try
             Dim Res As Object = Nothing
             Dim MyWeb As Object
-            'MyWeb = brwContent2.ActiveXInstance
+            MyWeb = brwContent2.ActiveXInstance
             MyWeb.ExecWB(Exec.OLECMDID_OPTICAL_ZOOM, execOpt.OLECMDEXECOPT_PROMPTUSER, Value, IntPtr.Zero)
         Catch ex As Exception
             MsgBox(ex.Message)
