@@ -1,13 +1,22 @@
 <?xml version="1.0"?>
 <Home>
 	<Music>
-		<GCSE>Home</GCSE>
+		<GCSE>
+      <Western_Music>Home</Western_Music>
+    </GCSE>
 		<AS>Home</AS>
 		<A2>Home</A2>
 	</Music>
 	<Music_Technology>
-		<GCSE>Home</GCSE>
-		<AS>Home</AS>
+		<AS>
+      <FX>Effects</FX>
+      <Hardware>Hardware</Hardware>
+      <Software>Software</Software>
+      <Microphones>Microphones</Microphones>
+      <Popular_Music>Decades</Popular_Music>
+      <MIDI>MIDI</MIDI>
+      <Test>JSTest</Test>
+    </AS>
 		<A2>Home</A2>
 	</Music_Technology>
 	<Grades>
