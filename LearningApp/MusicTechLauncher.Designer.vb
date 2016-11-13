@@ -483,6 +483,7 @@ Partial Class MusicTechLauncher
         'ToolStripButton1
         '
         Me.ToolStripButton1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddToolStripMenuItem, Me.RemoveToolStripMenuItem})
+        Me.ToolStripButton1.Enabled = False
         Me.ToolStripButton1.Image = CType(resources.GetObject("ToolStripButton1.Image"), System.Drawing.Image)
         Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton1.Name = "ToolStripButton1"
@@ -491,21 +492,24 @@ Partial Class MusicTechLauncher
         '
         'AddToolStripMenuItem
         '
+        Me.AddToolStripMenuItem.Enabled = False
         Me.AddToolStripMenuItem.Image = CType(resources.GetObject("AddToolStripMenuItem.Image"), System.Drawing.Image)
         Me.AddToolStripMenuItem.Name = "AddToolStripMenuItem"
-        Me.AddToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
+        Me.AddToolStripMenuItem.Size = New System.Drawing.Size(160, 30)
         Me.AddToolStripMenuItem.Text = "Add"
         '
         'RemoveToolStripMenuItem
         '
+        Me.RemoveToolStripMenuItem.Enabled = False
         Me.RemoveToolStripMenuItem.Image = CType(resources.GetObject("RemoveToolStripMenuItem.Image"), System.Drawing.Image)
         Me.RemoveToolStripMenuItem.Name = "RemoveToolStripMenuItem"
-        Me.RemoveToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
+        Me.RemoveToolStripMenuItem.Size = New System.Drawing.Size(160, 30)
         Me.RemoveToolStripMenuItem.Text = "Remove"
         '
         'ToolStripDropDownButton1
         '
         Me.ToolStripDropDownButton1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ZoomInToolStripMenuItem1, Me.ZoomResetToolStripMenuItem, Me.ZoomOutToolStripMenuItem1})
+        Me.ToolStripDropDownButton1.Enabled = False
         Me.ToolStripDropDownButton1.Image = CType(resources.GetObject("ToolStripDropDownButton1.Image"), System.Drawing.Image)
         Me.ToolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripDropDownButton1.Name = "ToolStripDropDownButton1"
@@ -514,26 +518,29 @@ Partial Class MusicTechLauncher
         '
         'ZoomInToolStripMenuItem1
         '
+        Me.ZoomInToolStripMenuItem1.Enabled = False
         Me.ZoomInToolStripMenuItem1.Image = CType(resources.GetObject("ZoomInToolStripMenuItem1.Image"), System.Drawing.Image)
         Me.ZoomInToolStripMenuItem1.Name = "ZoomInToolStripMenuItem1"
         Me.ZoomInToolStripMenuItem1.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Up), System.Windows.Forms.Keys)
-        Me.ZoomInToolStripMenuItem1.Size = New System.Drawing.Size(194, 22)
+        Me.ZoomInToolStripMenuItem1.Size = New System.Drawing.Size(202, 30)
         Me.ZoomInToolStripMenuItem1.Text = "Zoom In"
         '
         'ZoomResetToolStripMenuItem
         '
+        Me.ZoomResetToolStripMenuItem.Enabled = False
         Me.ZoomResetToolStripMenuItem.Image = CType(resources.GetObject("ZoomResetToolStripMenuItem.Image"), System.Drawing.Image)
         Me.ZoomResetToolStripMenuItem.Name = "ZoomResetToolStripMenuItem"
         Me.ZoomResetToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.D0), System.Windows.Forms.Keys)
-        Me.ZoomResetToolStripMenuItem.Size = New System.Drawing.Size(194, 22)
+        Me.ZoomResetToolStripMenuItem.Size = New System.Drawing.Size(202, 30)
         Me.ZoomResetToolStripMenuItem.Text = "Zoom Reset"
         '
         'ZoomOutToolStripMenuItem1
         '
+        Me.ZoomOutToolStripMenuItem1.Enabled = False
         Me.ZoomOutToolStripMenuItem1.Image = CType(resources.GetObject("ZoomOutToolStripMenuItem1.Image"), System.Drawing.Image)
         Me.ZoomOutToolStripMenuItem1.Name = "ZoomOutToolStripMenuItem1"
         Me.ZoomOutToolStripMenuItem1.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Down), System.Windows.Forms.Keys)
-        Me.ZoomOutToolStripMenuItem1.Size = New System.Drawing.Size(194, 22)
+        Me.ZoomOutToolStripMenuItem1.Size = New System.Drawing.Size(202, 30)
         Me.ZoomOutToolStripMenuItem1.Text = "Zoom Out"
         '
         'SplitContainer1
