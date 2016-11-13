@@ -88,6 +88,7 @@ Partial Class MusicTechLauncher
         Me.splSidebar = New System.Windows.Forms.SplitContainer()
         Me.trvTreeview2 = New System.Windows.Forms.TreeView()
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
+        Me.trvTreeview3 = New System.Windows.Forms.TreeView()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.brwContent2 = New System.Windows.Forms.WebBrowser()
@@ -101,7 +102,6 @@ Partial Class MusicTechLauncher
         Me.cntStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.cntSave = New System.Windows.Forms.ToolStripMenuItem()
         Me.cntClose = New System.Windows.Forms.ToolStripMenuItem()
-        Me.trvTreeview3 = New System.Windows.Forms.TreeView()
         Me.mnuStrip.SuspendLayout()
         Me.tlsStrip.SuspendLayout()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -139,7 +139,7 @@ Partial Class MusicTechLauncher
         Me.SaveToolStripMenuItem.Image = CType(resources.GetObject("SaveToolStripMenuItem.Image"), System.Drawing.Image)
         Me.SaveToolStripMenuItem.Name = "SaveToolStripMenuItem"
         Me.SaveToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.S), System.Windows.Forms.Keys)
-        Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(144, 22)
         Me.SaveToolStripMenuItem.Text = "Save"
         '
         'PrintToolStripMenuItem
@@ -147,20 +147,20 @@ Partial Class MusicTechLauncher
         Me.PrintToolStripMenuItem.Image = CType(resources.GetObject("PrintToolStripMenuItem.Image"), System.Drawing.Image)
         Me.PrintToolStripMenuItem.Name = "PrintToolStripMenuItem"
         Me.PrintToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.P), System.Windows.Forms.Keys)
-        Me.PrintToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.PrintToolStripMenuItem.Size = New System.Drawing.Size(144, 22)
         Me.PrintToolStripMenuItem.Text = "Print"
         '
         'ToolStripSeparator2
         '
         Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(149, 6)
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(141, 6)
         '
         'CloseToolStripMenuItem
         '
         Me.CloseToolStripMenuItem.Image = CType(resources.GetObject("CloseToolStripMenuItem.Image"), System.Drawing.Image)
         Me.CloseToolStripMenuItem.Name = "CloseToolStripMenuItem"
         Me.CloseToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.X), System.Windows.Forms.Keys)
-        Me.CloseToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.CloseToolStripMenuItem.Size = New System.Drawing.Size(144, 22)
         Me.CloseToolStripMenuItem.Text = "Close"
         '
         'EditToolStripMenuItem
@@ -175,19 +175,19 @@ Partial Class MusicTechLauncher
         Me.CopyToolStripMenuItem.Image = CType(resources.GetObject("CopyToolStripMenuItem.Image"), System.Drawing.Image)
         Me.CopyToolStripMenuItem.Name = "CopyToolStripMenuItem"
         Me.CopyToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.C), System.Windows.Forms.Keys)
-        Me.CopyToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.CopyToolStripMenuItem.Size = New System.Drawing.Size(144, 22)
         Me.CopyToolStripMenuItem.Text = "Copy"
         '
         'ToolStripSeparator8
         '
         Me.ToolStripSeparator8.Name = "ToolStripSeparator8"
-        Me.ToolStripSeparator8.Size = New System.Drawing.Size(149, 6)
+        Me.ToolStripSeparator8.Size = New System.Drawing.Size(141, 6)
         '
         'AddFolderToolStripMenuItem
         '
         Me.AddFolderToolStripMenuItem.Image = CType(resources.GetObject("AddFolderToolStripMenuItem.Image"), System.Drawing.Image)
         Me.AddFolderToolStripMenuItem.Name = "AddFolderToolStripMenuItem"
-        Me.AddFolderToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.AddFolderToolStripMenuItem.Size = New System.Drawing.Size(144, 22)
         Me.AddFolderToolStripMenuItem.Text = "Add Folder"
         '
         'OptionsToolStripMenuItem
@@ -201,7 +201,7 @@ Partial Class MusicTechLauncher
         '
         Me.AudioToolStripMenuItem.Image = CType(resources.GetObject("AudioToolStripMenuItem.Image"), System.Drawing.Image)
         Me.AudioToolStripMenuItem.Name = "AudioToolStripMenuItem"
-        Me.AudioToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.AudioToolStripMenuItem.Size = New System.Drawing.Size(106, 22)
         Me.AudioToolStripMenuItem.Text = "Audio"
         '
         'ViewToolStripMenuItem
@@ -215,7 +215,7 @@ Partial Class MusicTechLauncher
         '
         Me.MediaPlayerToolStripMenuItem.Image = CType(resources.GetObject("MediaPlayerToolStripMenuItem.Image"), System.Drawing.Image)
         Me.MediaPlayerToolStripMenuItem.Name = "MediaPlayerToolStripMenuItem"
-        Me.MediaPlayerToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.MediaPlayerToolStripMenuItem.Size = New System.Drawing.Size(142, 22)
         Me.MediaPlayerToolStripMenuItem.Text = "Media Player"
         '
         'PatchesToolStripMenuItem
@@ -223,7 +223,7 @@ Partial Class MusicTechLauncher
         Me.PatchesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Patch1ToolStripMenuItem, Me.Patch2ToolStripMenuItem, Me.Patch3ToolStripMenuItem, Me.Patch4ToolStripMenuItem, Me.Patch5ToolStripMenuItem})
         Me.PatchesToolStripMenuItem.Image = CType(resources.GetObject("PatchesToolStripMenuItem.Image"), System.Drawing.Image)
         Me.PatchesToolStripMenuItem.Name = "PatchesToolStripMenuItem"
-        Me.PatchesToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.PatchesToolStripMenuItem.Size = New System.Drawing.Size(142, 22)
         Me.PatchesToolStripMenuItem.Text = "Patches"
         '
         'Patch1ToolStripMenuItem
@@ -259,7 +259,7 @@ Partial Class MusicTechLauncher
         'ToolStripSeparator6
         '
         Me.ToolStripSeparator6.Name = "ToolStripSeparator6"
-        Me.ToolStripSeparator6.Size = New System.Drawing.Size(149, 6)
+        Me.ToolStripSeparator6.Size = New System.Drawing.Size(139, 6)
         '
         'AboutToolStripMenuItem
         '
@@ -344,14 +344,14 @@ Partial Class MusicTechLauncher
         'PageNavigateToolStripMenuItem
         '
         Me.PageNavigateToolStripMenuItem.Name = "PageNavigateToolStripMenuItem"
-        Me.PageNavigateToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.PageNavigateToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
         Me.PageNavigateToolStripMenuItem.Text = "Page Navigate"
         '
         'ThemeToolStripMenuItem
         '
         Me.ThemeToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LightToolStripMenuItem, Me.DefaultToolStripMenuItem, Me.DarkToolStripMenuItem})
         Me.ThemeToolStripMenuItem.Name = "ThemeToolStripMenuItem"
-        Me.ThemeToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ThemeToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
         Me.ThemeToolStripMenuItem.Text = "Theme"
         '
         'LightToolStripMenuItem
@@ -376,7 +376,7 @@ Partial Class MusicTechLauncher
         '
         Me.AdminToolStripMenuItem.Image = CType(resources.GetObject("AdminToolStripMenuItem.Image"), System.Drawing.Image)
         Me.AdminToolStripMenuItem.Name = "AdminToolStripMenuItem"
-        Me.AdminToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.AdminToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
         Me.AdminToolStripMenuItem.Text = "Force Admin"
         '
         'ToolsToolStripMenuItem
@@ -384,19 +384,19 @@ Partial Class MusicTechLauncher
         Me.ToolsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HTMLTestToolStripMenuItem})
         Me.ToolsToolStripMenuItem.Image = CType(resources.GetObject("ToolsToolStripMenuItem.Image"), System.Drawing.Image)
         Me.ToolsToolStripMenuItem.Name = "ToolsToolStripMenuItem"
-        Me.ToolsToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ToolsToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
         Me.ToolsToolStripMenuItem.Text = "Tools"
         '
         'HTMLTestToolStripMenuItem
         '
         Me.HTMLTestToolStripMenuItem.Name = "HTMLTestToolStripMenuItem"
-        Me.HTMLTestToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.HTMLTestToolStripMenuItem.Size = New System.Drawing.Size(131, 22)
         Me.HTMLTestToolStripMenuItem.Text = "HTML Test"
         '
         'JSTestToolStripMenuItem
         '
         Me.JSTestToolStripMenuItem.Name = "JSTestToolStripMenuItem"
-        Me.JSTestToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.JSTestToolStripMenuItem.Size = New System.Drawing.Size(150, 22)
         Me.JSTestToolStripMenuItem.Text = "JSTest"
         '
         'tlsStrip
@@ -493,14 +493,14 @@ Partial Class MusicTechLauncher
         '
         Me.AddToolStripMenuItem.Image = CType(resources.GetObject("AddToolStripMenuItem.Image"), System.Drawing.Image)
         Me.AddToolStripMenuItem.Name = "AddToolStripMenuItem"
-        Me.AddToolStripMenuItem.Size = New System.Drawing.Size(160, 30)
+        Me.AddToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
         Me.AddToolStripMenuItem.Text = "Add"
         '
         'RemoveToolStripMenuItem
         '
         Me.RemoveToolStripMenuItem.Image = CType(resources.GetObject("RemoveToolStripMenuItem.Image"), System.Drawing.Image)
         Me.RemoveToolStripMenuItem.Name = "RemoveToolStripMenuItem"
-        Me.RemoveToolStripMenuItem.Size = New System.Drawing.Size(160, 30)
+        Me.RemoveToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
         Me.RemoveToolStripMenuItem.Text = "Remove"
         '
         'ToolStripDropDownButton1
@@ -517,7 +517,7 @@ Partial Class MusicTechLauncher
         Me.ZoomInToolStripMenuItem1.Image = CType(resources.GetObject("ZoomInToolStripMenuItem1.Image"), System.Drawing.Image)
         Me.ZoomInToolStripMenuItem1.Name = "ZoomInToolStripMenuItem1"
         Me.ZoomInToolStripMenuItem1.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Up), System.Windows.Forms.Keys)
-        Me.ZoomInToolStripMenuItem1.Size = New System.Drawing.Size(202, 30)
+        Me.ZoomInToolStripMenuItem1.Size = New System.Drawing.Size(194, 22)
         Me.ZoomInToolStripMenuItem1.Text = "Zoom In"
         '
         'ZoomResetToolStripMenuItem
@@ -525,7 +525,7 @@ Partial Class MusicTechLauncher
         Me.ZoomResetToolStripMenuItem.Image = CType(resources.GetObject("ZoomResetToolStripMenuItem.Image"), System.Drawing.Image)
         Me.ZoomResetToolStripMenuItem.Name = "ZoomResetToolStripMenuItem"
         Me.ZoomResetToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.D0), System.Windows.Forms.Keys)
-        Me.ZoomResetToolStripMenuItem.Size = New System.Drawing.Size(202, 30)
+        Me.ZoomResetToolStripMenuItem.Size = New System.Drawing.Size(194, 22)
         Me.ZoomResetToolStripMenuItem.Text = "Zoom Reset"
         '
         'ZoomOutToolStripMenuItem1
@@ -533,7 +533,7 @@ Partial Class MusicTechLauncher
         Me.ZoomOutToolStripMenuItem1.Image = CType(resources.GetObject("ZoomOutToolStripMenuItem1.Image"), System.Drawing.Image)
         Me.ZoomOutToolStripMenuItem1.Name = "ZoomOutToolStripMenuItem1"
         Me.ZoomOutToolStripMenuItem1.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Down), System.Windows.Forms.Keys)
-        Me.ZoomOutToolStripMenuItem1.Size = New System.Drawing.Size(202, 30)
+        Me.ZoomOutToolStripMenuItem1.Size = New System.Drawing.Size(194, 22)
         Me.ZoomOutToolStripMenuItem1.Text = "Zoom Out"
         '
         'SplitContainer1
@@ -589,6 +589,15 @@ Partial Class MusicTechLauncher
         Me.ImageList1.ImageStream = CType(resources.GetObject("ImageList1.ImageStream"), System.Windows.Forms.ImageListStreamer)
         Me.ImageList1.TransparentColor = System.Drawing.Color.Transparent
         Me.ImageList1.Images.SetKeyName(0, "folder-10.png")
+        '
+        'trvTreeview3
+        '
+        Me.trvTreeview3.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.trvTreeview3.Location = New System.Drawing.Point(0, 0)
+        Me.trvTreeview3.Name = "trvTreeview3"
+        Me.trvTreeview3.Size = New System.Drawing.Size(218, 353)
+        Me.trvTreeview3.StateImageList = Me.ImageList1
+        Me.trvTreeview3.TabIndex = 0
         '
         'StatusStrip1
         '
@@ -680,14 +689,6 @@ Partial Class MusicTechLauncher
         Me.cntClose.Name = "cntClose"
         Me.cntClose.Size = New System.Drawing.Size(103, 22)
         Me.cntClose.Text = "Close"
-        '
-        'trvTreeview3
-        '
-        Me.trvTreeview3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.trvTreeview3.Location = New System.Drawing.Point(0, 0)
-        Me.trvTreeview3.Name = "trvTreeview3"
-        Me.trvTreeview3.Size = New System.Drawing.Size(218, 353)
-        Me.trvTreeview3.TabIndex = 0
         '
         'MusicTechLauncher
         '

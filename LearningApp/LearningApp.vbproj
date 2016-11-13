@@ -195,6 +195,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="HTML\Templates\Template1.dwt" />
     <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
@@ -221,16 +222,20 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="HTML\404.html" />
+    <Content Include="HTML\Grades\Grades.html" />
     <Content Include="HTML\Home.html" />
-    <Content Include="HTML\Music_Technology.html" />
+    <Content Include="HTML\KS2\KS2.html" />
+    <Content Include="HTML\KS3\KS3.html" />
+    <Content Include="HTML\Music\Music.html" />
     <Content Include="HTML\bootstrap.min.css" />
-    <Content Include="HTML\Effects.html" />
     <Content Include="HTML\images\placeholder.svg" />
-    <Content Include="HTML\Microphones.html" />
-    <Content Include="HTML\Acoustics.html" />
-    <Content Include="HTML\Studio Equiment.html" />
-    <Content Include="HTML\Synths.html" />
+    <Content Include="HTML\Music_Technology\Acoustics.html" />
+    <Content Include="HTML\Music_Technology\Effects.html" />
+    <Content Include="HTML\Music_Technology\Microphones.html" />
+    <Content Include="HTML\Music_Technology\Music_Technology.html" />
+    <Content Include="HTML\Music_Technology\Studio Equiment.html" />
+    <Content Include="HTML\Music_Technology\Synths.html" />
+    <Content Include="HTML\System\404.html" />
     <Content Include="tree.xml" />
     <None Include="Resources\light-bulb-1.png" />
     <None Include="Resources\compass.png" />
@@ -256,7 +261,9 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="HTML\Max\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

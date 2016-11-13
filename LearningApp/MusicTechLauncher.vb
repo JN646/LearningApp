@@ -36,6 +36,7 @@ Public Class MusicTechLauncher
         ' Set the home navigation page
         brwContent2.Navigate(path1 + "Home.html")
 
+        ' Find Directories
         For Each directoryfound As String In My.Computer.FileSystem.GetDirectories(path1)
             trvTreeview2.Nodes.Add(directoryfound.Replace(path1, ""))
         Next
@@ -43,8 +44,10 @@ Public Class MusicTechLauncher
 
     Sub trvTreeview2_NodeMouseClick(ByVal sender As Object, ByVal e As TreeNodeMouseClickEventArgs) Handles trvTreeview2.NodeMouseClick
         ' Node name will find the relevant HTML file and then open in browser
+        trvTreeview3.Nodes.Clear()
+
+        ' Find Files
         For Each foundFile As String In My.Computer.FileSystem.GetFiles(path1 + trvTreeview2.SelectedNode.Text).Where(Function(item) item.ToLower().EndsWith(".html"))
-            trvTreeview3.Nodes.Clear()
             trvTreeview3.Nodes.Add(foundFile.Replace(path1 + trvTreeview2.SelectedNode.Text, ""))
         Next
     End Sub
@@ -65,28 +68,22 @@ Public Class MusicTechLauncher
         brwContent2.Refresh()
     End Sub
     Private Sub PageNavigateToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PageNavigateToolStripMenuItem.Click
-        Dim message, title, defaultValue As String
         Dim myValue As Object
 
-        ' Set prompt.
-        message = "Navigate to... "
-
-        ' Set title.
-        title = "navigation Box"
-        defaultValue = "http://www.google.co.uk"   ' Set default value.
-
         ' Display message, title, and default value.
-        myValue = InputBox(message, title, defaultValue)
+        myValue = InputBox("Navigate to... ", "Navigation Box", "http://www.google.co.uk")
 
         ' If user has clicked Cancel, set myValue to defaultValue 
-        If myValue Is "" Then myValue = defaultValue
+        If myValue Is "" Then myValue = "http://www.google.co.uk"
 
         brwContent2.Navigate(myValue)
     End Sub
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
+        ' Go Back
         brwContent2.GoBack()
     End Sub
     Private Sub btnForward_Click(sender As Object, e As EventArgs) Handles btnForward.Click
+        ' Go Forward
         brwContent2.GoForward()
     End Sub
 
@@ -98,6 +95,7 @@ Public Class MusicTechLauncher
         brwContent2.ShowPrintPreviewDialog()
     End Sub
     Private Sub UpdatesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UpdatesToolStripMenuItem.Click
+        ' Check Version
         If ProductVersion = "1" Then
             MessageBox.Show("This version is an Alpha... " + ProductVersion, ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information)
         Else
@@ -106,15 +104,8 @@ Public Class MusicTechLauncher
     End Sub
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
         If trvTreeview2.SelectedNode.Text = "Home" Then
-            ' Define the message you want to see inside the message box. 
-            Dim msg = "Data Saved"
-            Dim title = "File Saved"
-
-            ' Display a simple message box.
-            MsgBox(msg)
-
-            ' Add the title to the display.
-            MsgBox(msg, , title)
+            ' Message Box
+            MsgBox("Data Saved", , "File Saved")
         Else
             trvTreeview2.Nodes.Remove(trvTreeview2.SelectedNode)
         End If
