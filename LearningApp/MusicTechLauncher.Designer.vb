@@ -412,7 +412,7 @@ Partial Class MusicTechLauncher
         '
         'btnBack
         '
-        Me.btnBack.Image = CType(resources.GetObject("btnBack.Image"), System.Drawing.Image)
+        Me.btnBack.Image = Global.LearningApp.My.Resources.Resources.rewind
         Me.btnBack.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnBack.Name = "btnBack"
         Me.btnBack.Size = New System.Drawing.Size(60, 28)
@@ -420,7 +420,7 @@ Partial Class MusicTechLauncher
         '
         'tlsHome
         '
-        Me.tlsHome.Image = CType(resources.GetObject("tlsHome.Image"), System.Drawing.Image)
+        Me.tlsHome.Image = Global.LearningApp.My.Resources.Resources.home_1
         Me.tlsHome.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.tlsHome.Name = "tlsHome"
         Me.tlsHome.Size = New System.Drawing.Size(68, 28)
@@ -428,7 +428,7 @@ Partial Class MusicTechLauncher
         '
         'btnForward
         '
-        Me.btnForward.Image = CType(resources.GetObject("btnForward.Image"), System.Drawing.Image)
+        Me.btnForward.Image = Global.LearningApp.My.Resources.Resources.fast_forward
         Me.btnForward.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnForward.Name = "btnForward"
         Me.btnForward.Size = New System.Drawing.Size(78, 28)
@@ -449,7 +449,7 @@ Partial Class MusicTechLauncher
         '
         'btnSave
         '
-        Me.btnSave.Image = CType(resources.GetObject("btnSave.Image"), System.Drawing.Image)
+        Me.btnSave.Image = Global.LearningApp.My.Resources.Resources.save
         Me.btnSave.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnSave.Name = "btnSave"
         Me.btnSave.Size = New System.Drawing.Size(59, 28)
@@ -457,7 +457,7 @@ Partial Class MusicTechLauncher
         '
         'btnPrint
         '
-        Me.btnPrint.Image = CType(resources.GetObject("btnPrint.Image"), System.Drawing.Image)
+        Me.btnPrint.Image = Global.LearningApp.My.Resources.Resources.print
         Me.btnPrint.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnPrint.Name = "btnPrint"
         Me.btnPrint.Size = New System.Drawing.Size(60, 28)
