@@ -39,16 +39,20 @@ Public Class MusicTechLauncher
         For Each directoryfound As String In My.Computer.FileSystem.GetDirectories(path1)
             trvTreeview2.Nodes.Add(directoryfound.Replace(path1, ""))
         Next
+    End Sub
 
-        For Each foundFile As String In My.Computer.FileSystem.GetFiles(path1).Where(Function(item) item.ToLower().EndsWith(".html"))
-            trvTreeview3.Nodes.Add(foundFile.Replace(path1, ""))
+    Sub trvTreeview2_NodeMouseClick(ByVal sender As Object, ByVal e As TreeNodeMouseClickEventArgs) Handles trvTreeview2.NodeMouseClick
+        ' Node name will find the relevant HTML file and then open in browser
+        For Each foundFile As String In My.Computer.FileSystem.GetFiles(path1 + trvTreeview2.SelectedNode.Text).Where(Function(item) item.ToLower().EndsWith(".html"))
+            trvTreeview3.Nodes.Clear()
+            trvTreeview3.Nodes.Add(foundFile.Replace(path1 + trvTreeview2.SelectedNode.Text, ""))
         Next
     End Sub
 
     Sub trvTreeview3_NodeMouseClick(ByVal sender As Object, ByVal e As TreeNodeMouseClickEventArgs) Handles trvTreeview3.NodeMouseClick
         ' Node name will find the relevant HTML file and then open in browser
         tlsLessonName.Text = e.Node.Text
-        brwContent2.Navigate(path1 + e.Node.Text)
+        brwContent2.Navigate(path1 + trvTreeview2.SelectedNode.Text + e.Node.Text)
     End Sub
 
     ' Navigation
