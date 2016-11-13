@@ -36,7 +36,7 @@ Public Class MusicTechLauncher
         ' Set the home navigation page
         brwContent2.Navigate(path1 + "Home.html")
 
-        For Each foundFile As String In My.Computer.FileSystem.GetFiles(path1)
+        For Each foundFile As String In My.Computer.FileSystem.GetFiles(path1).Where(Function(item) item.ToLower().EndsWith(".html"))
             trvTreeview2.Nodes.Add(foundFile.Replace(path1, ""))
         Next
     End Sub
@@ -44,7 +44,7 @@ Public Class MusicTechLauncher
     Sub trvTreeview2_NodeMouseClick(ByVal sender As Object, ByVal e As TreeNodeMouseClickEventArgs) Handles trvTreeview2.NodeMouseClick
         ' Node name will find the relevant HTML file and then open in browser
         tlsLessonName.Text = e.Node.Text
-        brwContent2.Navigate(path1 + e.Node.Text + ".html")
+        brwContent2.Navigate(path1 + e.Node.Text)
 
     End Sub
 
