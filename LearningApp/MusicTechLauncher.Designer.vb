@@ -98,6 +98,9 @@ Partial Class MusicTechLauncher
         Me.ToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem4 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.cntStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.cntSave = New System.Windows.Forms.ToolStripMenuItem()
+        Me.cntClose = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuStrip.SuspendLayout()
         Me.tlsStrip.SuspendLayout()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -109,6 +112,7 @@ Partial Class MusicTechLauncher
         Me.splSidebar.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         CType(Me.MetroStyleManager1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.cntStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'mnuStrip
@@ -132,6 +136,7 @@ Partial Class MusicTechLauncher
         '
         Me.SaveToolStripMenuItem.Image = CType(resources.GetObject("SaveToolStripMenuItem.Image"), System.Drawing.Image)
         Me.SaveToolStripMenuItem.Name = "SaveToolStripMenuItem"
+        Me.SaveToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.S), System.Windows.Forms.Keys)
         Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.SaveToolStripMenuItem.Text = "Save"
         '
@@ -486,14 +491,14 @@ Partial Class MusicTechLauncher
         '
         Me.AddToolStripMenuItem.Image = CType(resources.GetObject("AddToolStripMenuItem.Image"), System.Drawing.Image)
         Me.AddToolStripMenuItem.Name = "AddToolStripMenuItem"
-        Me.AddToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
+        Me.AddToolStripMenuItem.Size = New System.Drawing.Size(160, 30)
         Me.AddToolStripMenuItem.Text = "Add"
         '
         'RemoveToolStripMenuItem
         '
         Me.RemoveToolStripMenuItem.Image = CType(resources.GetObject("RemoveToolStripMenuItem.Image"), System.Drawing.Image)
         Me.RemoveToolStripMenuItem.Name = "RemoveToolStripMenuItem"
-        Me.RemoveToolStripMenuItem.Size = New System.Drawing.Size(117, 22)
+        Me.RemoveToolStripMenuItem.Size = New System.Drawing.Size(160, 30)
         Me.RemoveToolStripMenuItem.Text = "Remove"
         '
         'ToolStripDropDownButton1
@@ -510,7 +515,7 @@ Partial Class MusicTechLauncher
         Me.ZoomInToolStripMenuItem1.Image = CType(resources.GetObject("ZoomInToolStripMenuItem1.Image"), System.Drawing.Image)
         Me.ZoomInToolStripMenuItem1.Name = "ZoomInToolStripMenuItem1"
         Me.ZoomInToolStripMenuItem1.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Up), System.Windows.Forms.Keys)
-        Me.ZoomInToolStripMenuItem1.Size = New System.Drawing.Size(194, 22)
+        Me.ZoomInToolStripMenuItem1.Size = New System.Drawing.Size(202, 30)
         Me.ZoomInToolStripMenuItem1.Text = "Zoom In"
         '
         'ZoomResetToolStripMenuItem
@@ -518,7 +523,7 @@ Partial Class MusicTechLauncher
         Me.ZoomResetToolStripMenuItem.Image = CType(resources.GetObject("ZoomResetToolStripMenuItem.Image"), System.Drawing.Image)
         Me.ZoomResetToolStripMenuItem.Name = "ZoomResetToolStripMenuItem"
         Me.ZoomResetToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.D0), System.Windows.Forms.Keys)
-        Me.ZoomResetToolStripMenuItem.Size = New System.Drawing.Size(194, 22)
+        Me.ZoomResetToolStripMenuItem.Size = New System.Drawing.Size(202, 30)
         Me.ZoomResetToolStripMenuItem.Text = "Zoom Reset"
         '
         'ZoomOutToolStripMenuItem1
@@ -526,7 +531,7 @@ Partial Class MusicTechLauncher
         Me.ZoomOutToolStripMenuItem1.Image = CType(resources.GetObject("ZoomOutToolStripMenuItem1.Image"), System.Drawing.Image)
         Me.ZoomOutToolStripMenuItem1.Name = "ZoomOutToolStripMenuItem1"
         Me.ZoomOutToolStripMenuItem1.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Down), System.Windows.Forms.Keys)
-        Me.ZoomOutToolStripMenuItem1.Size = New System.Drawing.Size(194, 22)
+        Me.ZoomOutToolStripMenuItem1.Size = New System.Drawing.Size(202, 30)
         Me.ZoomOutToolStripMenuItem1.Text = "Zoom Out"
         '
         'SplitContainer1
@@ -649,6 +654,27 @@ Partial Class MusicTechLauncher
         Me.ToolStripMenuItem1.Size = New System.Drawing.Size(75, 31)
         Me.ToolStripMenuItem1.Text = "Zoom"
         '
+        'cntStrip1
+        '
+        Me.cntStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.cntSave, Me.cntClose})
+        Me.cntStrip1.Name = "cntStrip1"
+        Me.cntStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
+        Me.cntStrip1.Size = New System.Drawing.Size(104, 48)
+        '
+        'cntSave
+        '
+        Me.cntSave.Image = CType(resources.GetObject("cntSave.Image"), System.Drawing.Image)
+        Me.cntSave.Name = "cntSave"
+        Me.cntSave.Size = New System.Drawing.Size(103, 22)
+        Me.cntSave.Text = "Save"
+        '
+        'cntClose
+        '
+        Me.cntClose.Image = CType(resources.GetObject("cntClose.Image"), System.Drawing.Image)
+        Me.cntClose.Name = "cntClose"
+        Me.cntClose.Size = New System.Drawing.Size(103, 22)
+        Me.cntClose.Text = "Close"
+        '
         'MusicTechLauncher
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -676,6 +702,7 @@ Partial Class MusicTechLauncher
         Me.StatusStrip1.ResumeLayout(False)
         Me.StatusStrip1.PerformLayout()
         CType(Me.MetroStyleManager1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.cntStrip1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -755,4 +782,7 @@ Partial Class MusicTechLauncher
     Friend WithEvents JSTestToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents brwContent2 As WebBrowser
     Friend WithEvents trvTreeview2 As TreeView
+    Friend WithEvents cntStrip1 As ContextMenuStrip
+    Friend WithEvents cntSave As ToolStripMenuItem
+    Friend WithEvents cntClose As ToolStripMenuItem
 End Class

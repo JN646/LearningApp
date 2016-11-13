@@ -22,167 +22,213 @@ Partial Class AudioPref
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.TabControl1 = New System.Windows.Forms.TabControl()
-        Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.sldBuffer = New System.Windows.Forms.HScrollBar()
-        Me.lblLatency = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.btnCancel = New System.Windows.Forms.Button()
-        Me.btnOK = New System.Windows.Forms.Button()
-        Me.cmbAudioDevices = New System.Windows.Forms.ComboBox()
-        Me.lblAudioDevice = New System.Windows.Forms.Label()
-        Me.cmbSampleRate = New System.Windows.Forms.ComboBox()
-        Me.lblSampleRate = New System.Windows.Forms.Label()
-        Me.TabControl1.SuspendLayout()
-        Me.TabPage1.SuspendLayout()
+        Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AudioPref))
+        Me.MetroTabControl1 = New MetroFramework.Controls.MetroTabControl()
+        Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
+        Me.MetroTabPage2 = New MetroFramework.Controls.MetroTabPage()
+        Me.MetroTabPage1 = New MetroFramework.Controls.MetroTabPage()
+        Me.cmbSampleRate2 = New MetroFramework.Controls.MetroComboBox()
+        Me.cmbAudioDevices2 = New MetroFramework.Controls.MetroComboBox()
+        Me.sldBuffer = New MetroFramework.Controls.MetroScrollBar()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.btnOK = New MetroFramework.Controls.MetroButton()
+        Me.btnCancel = New MetroFramework.Controls.MetroButton()
+        Me.lblLatency = New MetroFramework.Controls.MetroLabel()
+        Me.lblAudioDevices = New MetroFramework.Controls.MetroLabel()
+        Me.lblSampleRate = New MetroFramework.Controls.MetroLabel()
+        Me.lblBuffer = New MetroFramework.Controls.MetroLabel()
+        Me.MetroTabControl1.SuspendLayout()
+        Me.MetroTabPage1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'TabControl1
+        'MetroTabControl1
         '
-        Me.TabControl1.Controls.Add(Me.TabPage1)
-        Me.TabControl1.Controls.Add(Me.TabPage2)
-        Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TabControl1.Location = New System.Drawing.Point(0, 0)
-        Me.TabControl1.Name = "TabControl1"
-        Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(242, 190)
-        Me.TabControl1.TabIndex = 0
+        Me.MetroTabControl1.Controls.Add(Me.MetroTabPage1)
+        Me.MetroTabControl1.Controls.Add(Me.MetroTabPage2)
+        Me.MetroTabControl1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.MetroTabControl1.Location = New System.Drawing.Point(0, 0)
+        Me.MetroTabControl1.Name = "MetroTabControl1"
+        Me.MetroTabControl1.SelectedIndex = 0
+        Me.MetroTabControl1.Size = New System.Drawing.Size(382, 223)
+        Me.MetroTabControl1.TabIndex = 22
+        Me.MetroTabControl1.UseSelectable = True
         '
-        'TabPage1
+        'ImageList1
         '
-        Me.TabPage1.Controls.Add(Me.sldBuffer)
-        Me.TabPage1.Controls.Add(Me.lblLatency)
-        Me.TabPage1.Controls.Add(Me.Label1)
-        Me.TabPage1.Controls.Add(Me.btnCancel)
-        Me.TabPage1.Controls.Add(Me.btnOK)
-        Me.TabPage1.Controls.Add(Me.cmbAudioDevices)
-        Me.TabPage1.Controls.Add(Me.lblAudioDevice)
-        Me.TabPage1.Controls.Add(Me.cmbSampleRate)
-        Me.TabPage1.Controls.Add(Me.lblSampleRate)
-        Me.TabPage1.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(234, 164)
-        Me.TabPage1.TabIndex = 0
-        Me.TabPage1.Text = "TabPage1"
-        Me.TabPage1.UseVisualStyleBackColor = True
+        Me.ImageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit
+        Me.ImageList1.ImageSize = New System.Drawing.Size(16, 16)
+        Me.ImageList1.TransparentColor = System.Drawing.Color.Transparent
         '
-        'TabPage2
+        'MetroTabPage2
         '
-        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(192, 74)
-        Me.TabPage2.TabIndex = 1
-        Me.TabPage2.Text = "TabPage2"
-        Me.TabPage2.UseVisualStyleBackColor = True
+        Me.MetroTabPage2.HorizontalScrollbarBarColor = True
+        Me.MetroTabPage2.HorizontalScrollbarHighlightOnWheel = False
+        Me.MetroTabPage2.HorizontalScrollbarSize = 10
+        Me.MetroTabPage2.Location = New System.Drawing.Point(4, 38)
+        Me.MetroTabPage2.Name = "MetroTabPage2"
+        Me.MetroTabPage2.Size = New System.Drawing.Size(1002, 419)
+        Me.MetroTabPage2.TabIndex = 1
+        Me.MetroTabPage2.Text = "MetroTabPage2"
+        Me.MetroTabPage2.VerticalScrollbarBarColor = True
+        Me.MetroTabPage2.VerticalScrollbarHighlightOnWheel = False
+        Me.MetroTabPage2.VerticalScrollbarSize = 10
+        '
+        'MetroTabPage1
+        '
+        Me.MetroTabPage1.Controls.Add(Me.lblBuffer)
+        Me.MetroTabPage1.Controls.Add(Me.lblSampleRate)
+        Me.MetroTabPage1.Controls.Add(Me.lblAudioDevices)
+        Me.MetroTabPage1.Controls.Add(Me.lblLatency)
+        Me.MetroTabPage1.Controls.Add(Me.btnCancel)
+        Me.MetroTabPage1.Controls.Add(Me.btnOK)
+        Me.MetroTabPage1.Controls.Add(Me.cmbSampleRate2)
+        Me.MetroTabPage1.Controls.Add(Me.cmbAudioDevices2)
+        Me.MetroTabPage1.Controls.Add(Me.sldBuffer)
+        Me.MetroTabPage1.Controls.Add(Me.PictureBox1)
+        Me.MetroTabPage1.HorizontalScrollbarBarColor = True
+        Me.MetroTabPage1.HorizontalScrollbarHighlightOnWheel = False
+        Me.MetroTabPage1.HorizontalScrollbarSize = 10
+        Me.MetroTabPage1.Location = New System.Drawing.Point(4, 38)
+        Me.MetroTabPage1.Name = "MetroTabPage1"
+        Me.MetroTabPage1.Size = New System.Drawing.Size(374, 181)
+        Me.MetroTabPage1.TabIndex = 0
+        Me.MetroTabPage1.Text = "MetroTabPage1"
+        Me.MetroTabPage1.VerticalScrollbarBarColor = True
+        Me.MetroTabPage1.VerticalScrollbarHighlightOnWheel = False
+        Me.MetroTabPage1.VerticalScrollbarSize = 10
+        '
+        'cmbSampleRate2
+        '
+        Me.cmbSampleRate2.FormattingEnabled = True
+        Me.cmbSampleRate2.ItemHeight = 23
+        Me.cmbSampleRate2.Location = New System.Drawing.Point(232, 49)
+        Me.cmbSampleRate2.Name = "cmbSampleRate2"
+        Me.cmbSampleRate2.Size = New System.Drawing.Size(121, 29)
+        Me.cmbSampleRate2.TabIndex = 31
+        Me.cmbSampleRate2.UseSelectable = True
+        '
+        'cmbAudioDevices2
+        '
+        Me.cmbAudioDevices2.FormattingEnabled = True
+        Me.cmbAudioDevices2.ItemHeight = 23
+        Me.cmbAudioDevices2.Location = New System.Drawing.Point(232, 13)
+        Me.cmbAudioDevices2.Name = "cmbAudioDevices2"
+        Me.cmbAudioDevices2.Size = New System.Drawing.Size(121, 29)
+        Me.cmbAudioDevices2.TabIndex = 30
+        Me.cmbAudioDevices2.UseSelectable = True
         '
         'sldBuffer
         '
-        Me.sldBuffer.Location = New System.Drawing.Point(102, 75)
+        Me.sldBuffer.LargeChange = 10
+        Me.sldBuffer.Location = New System.Drawing.Point(216, 84)
+        Me.sldBuffer.Maximum = 3000
+        Me.sldBuffer.Minimum = 0
+        Me.sldBuffer.MouseWheelBarPartitions = 10
         Me.sldBuffer.Name = "sldBuffer"
-        Me.sldBuffer.Size = New System.Drawing.Size(121, 17)
-        Me.sldBuffer.TabIndex = 17
+        Me.sldBuffer.Orientation = MetroFramework.Controls.MetroScrollOrientation.Horizontal
+        Me.sldBuffer.ScrollbarSize = 10
+        Me.sldBuffer.Size = New System.Drawing.Size(149, 10)
+        Me.sldBuffer.TabIndex = 29
+        Me.sldBuffer.UseSelectable = True
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(10, 16)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(100, 106)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 28
+        Me.PictureBox1.TabStop = False
+        '
+        'btnOK
+        '
+        Me.btnOK.Location = New System.Drawing.Point(138, 135)
+        Me.btnOK.Name = "btnOK"
+        Me.btnOK.Size = New System.Drawing.Size(75, 23)
+        Me.btnOK.TabIndex = 32
+        Me.btnOK.Text = "OK"
+        Me.btnOK.UseSelectable = True
+        '
+        'btnCancel
+        '
+        Me.btnCancel.Location = New System.Drawing.Point(290, 135)
+        Me.btnCancel.Name = "btnCancel"
+        Me.btnCancel.Size = New System.Drawing.Size(75, 23)
+        Me.btnCancel.TabIndex = 33
+        Me.btnCancel.Text = "Cancel"
+        Me.btnCancel.UseSelectable = True
         '
         'lblLatency
         '
         Me.lblLatency.AutoSize = True
-        Me.lblLatency.Location = New System.Drawing.Point(131, 104)
+        Me.lblLatency.Location = New System.Drawing.Point(259, 97)
         Me.lblLatency.Name = "lblLatency"
-        Me.lblLatency.Size = New System.Drawing.Size(68, 13)
-        Me.lblLatency.TabIndex = 16
-        Me.lblLatency.Text = "LatencyTime"
+        Me.lblLatency.Size = New System.Drawing.Size(81, 19)
+        Me.lblLatency.TabIndex = 34
+        Me.lblLatency.Text = "MetroLabel1"
         '
-        'Label1
+        'lblAudioDevices
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(12, 79)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(35, 13)
-        Me.Label1.TabIndex = 15
-        Me.Label1.Text = "Buffer"
-        '
-        'btnCancel
-        '
-        Me.btnCancel.Location = New System.Drawing.Point(148, 134)
-        Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Size = New System.Drawing.Size(75, 23)
-        Me.btnCancel.TabIndex = 14
-        Me.btnCancel.Text = "Cancel"
-        Me.btnCancel.UseVisualStyleBackColor = True
-        '
-        'btnOK
-        '
-        Me.btnOK.Location = New System.Drawing.Point(15, 134)
-        Me.btnOK.Name = "btnOK"
-        Me.btnOK.Size = New System.Drawing.Size(75, 23)
-        Me.btnOK.TabIndex = 13
-        Me.btnOK.Text = "OK"
-        Me.btnOK.UseVisualStyleBackColor = True
-        '
-        'cmbAudioDevices
-        '
-        Me.cmbAudioDevices.FormattingEnabled = True
-        Me.cmbAudioDevices.Location = New System.Drawing.Point(102, 8)
-        Me.cmbAudioDevices.Name = "cmbAudioDevices"
-        Me.cmbAudioDevices.Size = New System.Drawing.Size(121, 21)
-        Me.cmbAudioDevices.TabIndex = 12
-        '
-        'lblAudioDevice
-        '
-        Me.lblAudioDevice.AutoSize = True
-        Me.lblAudioDevice.Location = New System.Drawing.Point(12, 11)
-        Me.lblAudioDevice.Name = "lblAudioDevice"
-        Me.lblAudioDevice.Size = New System.Drawing.Size(71, 13)
-        Me.lblAudioDevice.TabIndex = 11
-        Me.lblAudioDevice.Text = "Audio Device"
-        '
-        'cmbSampleRate
-        '
-        Me.cmbSampleRate.FormattingEnabled = True
-        Me.cmbSampleRate.Location = New System.Drawing.Point(102, 41)
-        Me.cmbSampleRate.Name = "cmbSampleRate"
-        Me.cmbSampleRate.Size = New System.Drawing.Size(121, 21)
-        Me.cmbSampleRate.TabIndex = 10
+        Me.lblAudioDevices.AutoSize = True
+        Me.lblAudioDevices.Location = New System.Drawing.Point(135, 16)
+        Me.lblAudioDevices.Name = "lblAudioDevices"
+        Me.lblAudioDevices.Size = New System.Drawing.Size(91, 19)
+        Me.lblAudioDevices.TabIndex = 35
+        Me.lblAudioDevices.Text = "Audio Devices"
         '
         'lblSampleRate
         '
         Me.lblSampleRate.AutoSize = True
-        Me.lblSampleRate.Location = New System.Drawing.Point(12, 44)
+        Me.lblSampleRate.Location = New System.Drawing.Point(135, 49)
         Me.lblSampleRate.Name = "lblSampleRate"
-        Me.lblSampleRate.Size = New System.Drawing.Size(68, 13)
-        Me.lblSampleRate.TabIndex = 9
+        Me.lblSampleRate.Size = New System.Drawing.Size(83, 19)
+        Me.lblSampleRate.TabIndex = 36
         Me.lblSampleRate.Text = "Sample Rate"
+        '
+        'lblBuffer
+        '
+        Me.lblBuffer.AutoSize = True
+        Me.lblBuffer.Location = New System.Drawing.Point(135, 84)
+        Me.lblBuffer.Name = "lblBuffer"
+        Me.lblBuffer.Size = New System.Drawing.Size(44, 19)
+        Me.lblBuffer.TabIndex = 37
+        Me.lblBuffer.Text = "Buffer"
         '
         'AudioPref
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(242, 190)
+        Me.ClientSize = New System.Drawing.Size(382, 223)
         Me.ControlBox = False
-        Me.Controls.Add(Me.TabControl1)
+        Me.Controls.Add(Me.MetroTabControl1)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "AudioPref"
         Me.Text = "Audio Preferences"
-        Me.TabControl1.ResumeLayout(False)
-        Me.TabPage1.ResumeLayout(False)
-        Me.TabPage1.PerformLayout()
+        Me.MetroTabControl1.ResumeLayout(False)
+        Me.MetroTabPage1.ResumeLayout(False)
+        Me.MetroTabPage1.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
-    Friend WithEvents TabControl1 As TabControl
-    Friend WithEvents TabPage1 As TabPage
-    Friend WithEvents sldBuffer As HScrollBar
-    Friend WithEvents lblLatency As Label
-    Friend WithEvents Label1 As Label
-    Friend WithEvents btnCancel As Button
-    Friend WithEvents btnOK As Button
-    Friend WithEvents cmbAudioDevices As ComboBox
-    Friend WithEvents lblAudioDevice As Label
-    Friend WithEvents cmbSampleRate As ComboBox
-    Friend WithEvents lblSampleRate As Label
-    Friend WithEvents TabPage2 As TabPage
+    Friend WithEvents MetroTabControl1 As MetroFramework.Controls.MetroTabControl
+    Friend WithEvents MetroTabPage1 As MetroFramework.Controls.MetroTabPage
+    Friend WithEvents cmbSampleRate2 As MetroFramework.Controls.MetroComboBox
+    Friend WithEvents cmbAudioDevices2 As MetroFramework.Controls.MetroComboBox
+    Friend WithEvents sldBuffer As MetroFramework.Controls.MetroScrollBar
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents MetroTabPage2 As MetroFramework.Controls.MetroTabPage
+    Friend WithEvents ImageList1 As ImageList
+    Friend WithEvents lblLatency As MetroFramework.Controls.MetroLabel
+    Friend WithEvents btnCancel As MetroFramework.Controls.MetroButton
+    Friend WithEvents btnOK As MetroFramework.Controls.MetroButton
+    Friend WithEvents lblBuffer As MetroFramework.Controls.MetroLabel
+    Friend WithEvents lblSampleRate As MetroFramework.Controls.MetroLabel
+    Friend WithEvents lblAudioDevices As MetroFramework.Controls.MetroLabel
 End Class
