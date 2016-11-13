@@ -101,6 +101,7 @@ Partial Class MusicTechLauncher
         Me.cntStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.cntSave = New System.Windows.Forms.ToolStripMenuItem()
         Me.cntClose = New System.Windows.Forms.ToolStripMenuItem()
+        Me.trvTreeview3 = New System.Windows.Forms.TreeView()
         Me.mnuStrip.SuspendLayout()
         Me.tlsStrip.SuspendLayout()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -109,6 +110,7 @@ Partial Class MusicTechLauncher
         Me.SplitContainer1.SuspendLayout()
         CType(Me.splSidebar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.splSidebar.Panel1.SuspendLayout()
+        Me.splSidebar.Panel2.SuspendLayout()
         Me.splSidebar.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         CType(Me.MetroStyleManager1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -563,8 +565,12 @@ Partial Class MusicTechLauncher
         'splSidebar.Panel1
         '
         Me.splSidebar.Panel1.Controls.Add(Me.trvTreeview2)
+        '
+        'splSidebar.Panel2
+        '
+        Me.splSidebar.Panel2.Controls.Add(Me.trvTreeview3)
         Me.splSidebar.Size = New System.Drawing.Size(218, 604)
-        Me.splSidebar.SplitterDistance = 541
+        Me.splSidebar.SplitterDistance = 247
         Me.splSidebar.TabIndex = 2
         '
         'trvTreeview2
@@ -575,7 +581,7 @@ Partial Class MusicTechLauncher
         Me.trvTreeview2.Location = New System.Drawing.Point(0, 0)
         Me.trvTreeview2.Name = "trvTreeview2"
         Me.trvTreeview2.SelectedImageIndex = 0
-        Me.trvTreeview2.Size = New System.Drawing.Size(218, 541)
+        Me.trvTreeview2.Size = New System.Drawing.Size(218, 247)
         Me.trvTreeview2.TabIndex = 0
         '
         'ImageList1
@@ -675,6 +681,14 @@ Partial Class MusicTechLauncher
         Me.cntClose.Size = New System.Drawing.Size(103, 22)
         Me.cntClose.Text = "Close"
         '
+        'trvTreeview3
+        '
+        Me.trvTreeview3.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.trvTreeview3.Location = New System.Drawing.Point(0, 0)
+        Me.trvTreeview3.Name = "trvTreeview3"
+        Me.trvTreeview3.Size = New System.Drawing.Size(218, 353)
+        Me.trvTreeview3.TabIndex = 0
+        '
         'MusicTechLauncher
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -697,6 +711,7 @@ Partial Class MusicTechLauncher
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
         Me.splSidebar.Panel1.ResumeLayout(False)
+        Me.splSidebar.Panel2.ResumeLayout(False)
         CType(Me.splSidebar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.splSidebar.ResumeLayout(False)
         Me.StatusStrip1.ResumeLayout(False)
@@ -785,4 +800,5 @@ Partial Class MusicTechLauncher
     Friend WithEvents cntStrip1 As ContextMenuStrip
     Friend WithEvents cntSave As ToolStripMenuItem
     Friend WithEvents cntClose As ToolStripMenuItem
+    Friend WithEvents trvTreeview3 As TreeView
 End Class

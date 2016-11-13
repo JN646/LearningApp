@@ -1,5 +1,5 @@
 ﻿Public Class login
-    Private Sub btnLogin_Click(sender As Object, e As EventArgs)
+    Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnOK2.Click
         Dim frmMain As MusicTechLauncher = New MusicTechLauncher()
         If MusicTechLauncher.AdminMode = 0 Then
             If txtUsername2.Text = "Admin" And txtPassword2.Text = "Password" Then
@@ -16,7 +16,7 @@
             MessageBox.Show("Already Logged in...", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
     End Sub
-    Private Sub btnCancel_Click(sender As Object, e As EventArgs)
-        Me.Close()
+    Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel2.Click
+        Close()
     End Sub
 End Class
