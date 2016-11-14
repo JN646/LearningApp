@@ -2,6 +2,15 @@
 Imports System.Xml
 
 Public Class MusicTechLauncher
+    Sub New()
+        ' This call is required by the designer.
+        InitializeComponent()
+
+        ' Add any initialization after the InitializeComponent() call.
+        brwContent2.ObjectForScripting = True
+        brwContent2.ScriptErrorsSuppressed = True
+    End Sub
+
     ' Default Zoom
     Dim InitialZoom As Integer = 100
 
