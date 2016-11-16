@@ -88,6 +88,7 @@ Partial Class MusicTechLauncher
         Me.splSidebar = New System.Windows.Forms.SplitContainer()
         Me.trvTreeview2 = New System.Windows.Forms.TreeView()
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
+        Me.ListView1 = New System.Windows.Forms.ListView()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.brwContent2 = New System.Windows.Forms.WebBrowser()
@@ -101,7 +102,7 @@ Partial Class MusicTechLauncher
         Me.ToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem4 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ListView1 = New System.Windows.Forms.ListView()
+        Me.ImageList2 = New System.Windows.Forms.ImageList(Me.components)
         Me.mnuStrip.SuspendLayout()
         Me.tlsStrip.SuspendLayout()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -579,7 +580,7 @@ Partial Class MusicTechLauncher
         '
         Me.splSidebar.Panel2.Controls.Add(Me.ListView1)
         Me.splSidebar.Size = New System.Drawing.Size(218, 604)
-        Me.splSidebar.SplitterDistance = 247
+        Me.splSidebar.SplitterDistance = 189
         Me.splSidebar.TabIndex = 2
         '
         'trvTreeview2
@@ -590,7 +591,7 @@ Partial Class MusicTechLauncher
         Me.trvTreeview2.Location = New System.Drawing.Point(0, 0)
         Me.trvTreeview2.Name = "trvTreeview2"
         Me.trvTreeview2.SelectedImageIndex = 0
-        Me.trvTreeview2.Size = New System.Drawing.Size(218, 247)
+        Me.trvTreeview2.Size = New System.Drawing.Size(218, 189)
         Me.trvTreeview2.TabIndex = 0
         '
         'ImageList1
@@ -599,6 +600,18 @@ Partial Class MusicTechLauncher
         Me.ImageList1.TransparentColor = System.Drawing.Color.Transparent
         Me.ImageList1.Images.SetKeyName(0, "folder-10.png")
         Me.ImageList1.Images.SetKeyName(1, "notebook.png")
+        '
+        'ListView1
+        '
+        Me.ListView1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.ListView1.LargeImageList = Me.ImageList2
+        Me.ListView1.Location = New System.Drawing.Point(0, 0)
+        Me.ListView1.Name = "ListView1"
+        Me.ListView1.Size = New System.Drawing.Size(218, 411)
+        Me.ListView1.SmallImageList = Me.ImageList2
+        Me.ListView1.TabIndex = 0
+        Me.ListView1.UseCompatibleStateImageBehavior = False
+        Me.ListView1.View = System.Windows.Forms.View.Tile
         '
         'StatusStrip1
         '
@@ -692,14 +705,12 @@ Partial Class MusicTechLauncher
         Me.ToolStripMenuItem1.Size = New System.Drawing.Size(75, 31)
         Me.ToolStripMenuItem1.Text = "Zoom"
         '
-        'ListView1
+        'ImageList2
         '
-        Me.ListView1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ListView1.Location = New System.Drawing.Point(0, 0)
-        Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(218, 353)
-        Me.ListView1.TabIndex = 0
-        Me.ListView1.UseCompatibleStateImageBehavior = False
+        Me.ImageList2.ImageStream = CType(resources.GetObject("ImageList2.ImageStream"), System.Windows.Forms.ImageListStreamer)
+        Me.ImageList2.TransparentColor = System.Drawing.Color.Transparent
+        Me.ImageList2.Images.SetKeyName(0, "archive-2.png")
+        Me.ImageList2.Images.SetKeyName(1, "bookmark-1.png")
         '
         'MusicTechLauncher
         '
@@ -813,4 +824,5 @@ Partial Class MusicTechLauncher
     Friend WithEvents cntSave As ToolStripMenuItem
     Friend WithEvents cntClose As ToolStripMenuItem
     Friend WithEvents ListView1 As ListView
+    Friend WithEvents ImageList2 As ImageList
 End Class

@@ -238,9 +238,9 @@
     <Content Include="HTML\Home.html" />
     <Content Include="HTML\KS2\KS2.html" />
     <Content Include="HTML\KS3\KS3.html" />
-    <Content Include="HTML\Music\Music.html" />
     <Content Include="HTML\bootstrap.min.css" />
     <Content Include="HTML\images\placeholder.svg" />
+    <Content Include="HTML\Music_ALevel\Music.html" />
     <Content Include="HTML\Music_Technology_ALevel\Acoustics.html" />
     <Content Include="HTML\Music_Technology_ALevel\Effects.html" />
     <Content Include="HTML\Music_Technology_ALevel\Microphones.html" />

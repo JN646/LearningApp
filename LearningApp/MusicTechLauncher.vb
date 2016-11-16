@@ -51,7 +51,7 @@ Public Class MusicTechLauncher
     Sub trvTreeview3_NodeMouseClick(ByVal sender As Object, ByVal e As TreeNodeMouseClickEventArgs)
         ' Node name will find the relevant HTML file and then open in browser
         tlsLessonName.Text = e.Node.Text
-        brwContent2.Navigate(path1 + trvTreeview2.SelectedNode.Text + e.Node.Text)
+        brwContent2.Navigate(path1 + e.Node.Text)
     End Sub
 
     ' Navigation
@@ -260,8 +260,7 @@ Public Class MusicTechLauncher
 
     End Sub
 
-    Private Sub GetDirectories(ByVal subDirs() As DirectoryInfo,
-        ByVal nodeToAddTo As TreeNode)
+    Private Sub GetDirectories(ByVal subDirs() As DirectoryInfo, ByVal nodeToAddTo As TreeNode)
 
         Dim aNode As TreeNode
         Dim subSubDirs() As DirectoryInfo
@@ -277,13 +276,11 @@ Public Class MusicTechLauncher
             nodeToAddTo.Nodes.Add(aNode)
         Next subDir
     End Sub
-    Private Sub treeView1_NodeMouseClick(ByVal sender As Object, ByVal e As TreeNodeMouseClickEventArgs) _
-        Handles trvTreeview2.NodeMouseClick
+    Private Sub treeView1_NodeMouseClick(ByVal sender As Object, ByVal e As TreeNodeMouseClickEventArgs) Handles trvTreeview2.NodeMouseClick
 
         Dim newSelected As TreeNode = e.Node
         ListView1.Items.Clear()
-        Dim nodeDirInfo As DirectoryInfo =
-        CType(newSelected.Tag, DirectoryInfo)
+        Dim nodeDirInfo As DirectoryInfo = CType(newSelected.Tag, DirectoryInfo)
         Dim subItems() As ListViewItem.ListViewSubItem
         Dim item As ListViewItem = Nothing
 
@@ -291,9 +288,7 @@ Public Class MusicTechLauncher
         For Each dir In nodeDirInfo.GetDirectories()
             item = New ListViewItem(dir.Name, 0)
             subItems = New ListViewItem.ListViewSubItem() _
-                {New ListViewItem.ListViewSubItem(item, "Directory"),
-                New ListViewItem.ListViewSubItem(item,
-                dir.LastAccessTime.ToShortDateString())}
+                {New ListViewItem.ListViewSubItem(item, "Directory"), New ListViewItem.ListViewSubItem(item, dir.LastAccessTime.ToShortDateString())}
 
             item.SubItems.AddRange(subItems)
             ListView1.Items.Add(item)
@@ -302,9 +297,7 @@ Public Class MusicTechLauncher
         For Each file In nodeDirInfo.GetFiles()
             item = New ListViewItem(file.Name, 1)
             subItems = New ListViewItem.ListViewSubItem() _
-                {New ListViewItem.ListViewSubItem(item, "File"),
-                New ListViewItem.ListViewSubItem(item,
-                file.LastAccessTime.ToShortDateString())}
+                {New ListViewItem.ListViewSubItem(item, "Files"), New ListViewItem.ListViewSubItem(item, file.LastAccessTime.ToShortDateString())}
 
             item.SubItems.AddRange(subItems)
             ListView1.Items.Add(item)
