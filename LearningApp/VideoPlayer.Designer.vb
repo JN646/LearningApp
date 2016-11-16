@@ -38,6 +38,7 @@ Partial Class VideoPlayer
         '
         'AxWindowsMediaPlayer1
         '
+        Me.AxWindowsMediaPlayer1.AllowDrop = True
         Me.AxWindowsMediaPlayer1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.AxWindowsMediaPlayer1.Enabled = True
         Me.AxWindowsMediaPlayer1.Location = New System.Drawing.Point(20, 84)
@@ -64,14 +65,15 @@ Partial Class VideoPlayer
         '
         'OpenToolStripMenuItem
         '
+        Me.OpenToolStripMenuItem.Image = Global.LearningApp.My.Resources.Resources.folder
         Me.OpenToolStripMenuItem.Name = "OpenToolStripMenuItem"
-        Me.OpenToolStripMenuItem.Size = New System.Drawing.Size(103, 22)
+        Me.OpenToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.OpenToolStripMenuItem.Text = "Open"
         '
         'CloseToolStripMenuItem
         '
         Me.CloseToolStripMenuItem.Name = "CloseToolStripMenuItem"
-        Me.CloseToolStripMenuItem.Size = New System.Drawing.Size(103, 22)
+        Me.CloseToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.CloseToolStripMenuItem.Text = "Close"
         '
         'OpenFileDialog1
@@ -91,7 +93,8 @@ Partial Class VideoPlayer
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "VideoPlayer"
-        Me.Text = "VideoPlayer"
+        Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
+        Me.Text = "Video Player"
         CType(Me.AxWindowsMediaPlayer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()

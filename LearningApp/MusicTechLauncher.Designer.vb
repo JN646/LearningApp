@@ -133,7 +133,7 @@ Partial Class MusicTechLauncher
         Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SaveToolStripMenuItem, Me.PrintToolStripMenuItem, Me.ToolStripSeparator2, Me.CloseToolStripMenuItem})
         Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
         Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
-        Me.FileToolStripMenuItem.Text = "File"
+        Me.FileToolStripMenuItem.Text = "&File"
         '
         'ToolStripSeparator2
         '
@@ -145,7 +145,7 @@ Partial Class MusicTechLauncher
         Me.EditToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CopyToolStripMenuItem, Me.ToolStripSeparator8, Me.AddFolderToolStripMenuItem})
         Me.EditToolStripMenuItem.Name = "EditToolStripMenuItem"
         Me.EditToolStripMenuItem.Size = New System.Drawing.Size(39, 20)
-        Me.EditToolStripMenuItem.Text = "Edit"
+        Me.EditToolStripMenuItem.Text = "&Edit"
         '
         'ToolStripSeparator8
         '
@@ -157,14 +157,14 @@ Partial Class MusicTechLauncher
         Me.OptionsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AudioToolStripMenuItem})
         Me.OptionsToolStripMenuItem.Name = "OptionsToolStripMenuItem"
         Me.OptionsToolStripMenuItem.Size = New System.Drawing.Size(61, 20)
-        Me.OptionsToolStripMenuItem.Text = "Options"
+        Me.OptionsToolStripMenuItem.Text = "&Options"
         '
         'ViewToolStripMenuItem
         '
         Me.ViewToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MediaPlayerToolStripMenuItem, Me.PatchesToolStripMenuItem, Me.ToolStripSeparator6})
         Me.ViewToolStripMenuItem.Name = "ViewToolStripMenuItem"
         Me.ViewToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
-        Me.ViewToolStripMenuItem.Text = "View"
+        Me.ViewToolStripMenuItem.Text = "&View"
         '
         'ToolStripSeparator6
         '
@@ -176,7 +176,7 @@ Partial Class MusicTechLauncher
         Me.AboutToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AboutToolStripMenuItem1, Me.DocumentationToolStripMenuItem, Me.ToolStripSeparator3, Me.UpdatesToolStripMenuItem, Me.AdobeAcrobatToolStripMenuItem, Me.DownloadMaxMSPToolStripMenuItem, Me.ToolStripSeparator4, Me.AccountToolStripMenuItem})
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
         Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
-        Me.AboutToolStripMenuItem.Text = "Help"
+        Me.AboutToolStripMenuItem.Text = "&Help"
         '
         'ToolStripSeparator3
         '
@@ -484,7 +484,7 @@ Partial Class MusicTechLauncher
         Me.SaveToolStripMenuItem.Image = CType(resources.GetObject("SaveToolStripMenuItem.Image"), System.Drawing.Image)
         Me.SaveToolStripMenuItem.Name = "SaveToolStripMenuItem"
         Me.SaveToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.S), System.Windows.Forms.Keys)
-        Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(144, 22)
+        Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.SaveToolStripMenuItem.Text = "Save"
         '
         'PrintToolStripMenuItem
