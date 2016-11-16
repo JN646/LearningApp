@@ -54,8 +54,9 @@ Public Class MusicTechLauncher
     End Sub
     Private Sub btnRefresh_Click(sender As Object, e As EventArgs) Handles btnRefresh.Click
         ' Refresh browser content
-        PopulateTreeView()
         brwContent2.Refresh()
+        trvTreeview2.Nodes.Clear()
+        PopulateTreeView()
     End Sub
     Private Sub PageNavigateToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PageNavigateToolStripMenuItem.Click
         Dim myValue As Object
