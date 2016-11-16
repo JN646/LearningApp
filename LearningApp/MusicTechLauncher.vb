@@ -22,7 +22,7 @@ Public Class MusicTechLauncher
     Dim path1 As String = Path.Replace("\bin\Debug\", "\HTML\")
     Dim path2 As String = Path.Replace("\bin\Debug\", "\")
 
-    Private mRootPath As String = path2
+    Private mRootPath As String = path1
 
     ' Enums
     Public Enum Exec
@@ -45,12 +45,6 @@ Public Class MusicTechLauncher
 
         ' Set the home navigation page
         brwContent2.Navigate(path1 + "Home.html")
-    End Sub
-
-    Sub trvTreeview3_NodeMouseClick(ByVal sender As Object, ByVal e As TreeNodeMouseClickEventArgs)
-        ' Node name will find the relevant HTML file and then open in browser
-        tlsLessonName.Text = e.Node.Text
-        brwContent2.Navigate(path1 + e.Node.Text)
     End Sub
 
     ' Navigation
@@ -283,18 +277,9 @@ Public Class MusicTechLauncher
         Dim nodeDirInfo As DirectoryInfo = CType(newSelected.Tag, DirectoryInfo)
         Dim subItems() As ListViewItem.ListViewSubItem
         Dim item As ListViewItem = Nothing
-
-        Dim dir As DirectoryInfo
-        For Each dir In nodeDirInfo.GetDirectories()
-            item = New ListViewItem(dir.Name, 0)
-            subItems = New ListViewItem.ListViewSubItem() _
-                {New ListViewItem.ListViewSubItem(item, "Directory"), New ListViewItem.ListViewSubItem(item, dir.LastAccessTime.ToShortDateString())}
-
-            item.SubItems.AddRange(subItems)
-            ListView1.Items.Add(item)
-        Next dir
         Dim file As FileInfo
-        For Each file In nodeDirInfo.GetFiles()
+
+        For Each file In nodeDirInfo.GetFiles("*.html*")
             item = New ListViewItem(file.Name, 1)
             subItems = New ListViewItem.ListViewSubItem() _
                 {New ListViewItem.ListViewSubItem(item, "Files"), New ListViewItem.ListViewSubItem(item, file.LastAccessTime.ToShortDateString())}
@@ -304,6 +289,11 @@ Public Class MusicTechLauncher
         Next file
 
         ListView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize)
+    End Sub
 
+    Private Sub ListView1_ItemActivate(sender As Object, e As EventArgs) Handles ListView1.ItemActivate
+        ' Node name will find the relevant HTML file and then open in browser
+        tlsLessonName.Text = mRootPath + trvTreeview2.SelectedNode.Text + "\" + ListView1.SelectedItems(0).Text
+        brwContent2.Navigate(mRootPath + trvTreeview2.SelectedNode.Text + "\" + ListView1.SelectedItems(0).Text)
     End Sub
 End Class
