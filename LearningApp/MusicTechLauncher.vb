@@ -244,7 +244,7 @@ Public Class MusicTechLauncher
     Private Sub PopulateTreeView()
         Dim rootNode As TreeNode
 
-        Dim info As New DirectoryInfo("../..")
+        Dim info As New DirectoryInfo("../../HTML")
         If info.Exists Then
             rootNode = New TreeNode(info.Name)
             rootNode.Tag = info
@@ -259,6 +259,7 @@ Public Class MusicTechLauncher
         Dim aNode As TreeNode
         Dim subSubDirs() As DirectoryInfo
         Dim subDir As DirectoryInfo
+
         For Each subDir In subDirs
             aNode = New TreeNode(subDir.Name, 0, 0)
             aNode.Tag = subDir

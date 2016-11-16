@@ -509,6 +509,7 @@
     <None Include="Resources\worldwide-1.png" />
     <None Include="Resources\zoom-in.png" />
     <None Include="Resources\zoom-out.png" />
+    <None Include="Resources\Splash.jpg" />
     <Content Include="tree.xml" />
     <None Include="Resources\light-bulb-1.png" />
     <None Include="Resources\document.png" />
