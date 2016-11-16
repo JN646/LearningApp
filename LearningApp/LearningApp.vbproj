@@ -241,12 +241,13 @@
     <Content Include="HTML\Music\Music.html" />
     <Content Include="HTML\bootstrap.min.css" />
     <Content Include="HTML\images\placeholder.svg" />
-    <Content Include="HTML\Music_Technology\Acoustics.html" />
-    <Content Include="HTML\Music_Technology\Effects.html" />
-    <Content Include="HTML\Music_Technology\Microphones.html" />
-    <Content Include="HTML\Music_Technology\Music_Technology.html" />
-    <Content Include="HTML\Music_Technology\Studio Equiment.html" />
-    <Content Include="HTML\Music_Technology\Synths.html" />
+    <Content Include="HTML\Music_Technology_ALevel\Acoustics.html" />
+    <Content Include="HTML\Music_Technology_ALevel\Effects.html" />
+    <Content Include="HTML\Music_Technology_ALevel\Microphones.html" />
+    <Content Include="HTML\Music_Technology_ALevel\Music_Technology.html" />
+    <Content Include="HTML\Music_Technology_ALevel\Studio_Equiment.html" />
+    <Content Include="HTML\Music_Technology_ALevel\Synths.html" />
+    <Content Include="HTML\Music_Technology_ALevel\What_is_Sound.html" />
     <Content Include="HTML\System\404.html" />
     <None Include="Resources\add.png" />
     <None Include="Resources\add-1.png" />
@@ -534,6 +535,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="HTML\Max\" />
+    <Folder Include="HTML\Music_Technology_ALevel\Pop\" />
+    <Folder Include="HTML\Music_Technology_ALevel\Studio_Equipment\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
