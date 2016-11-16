@@ -47,7 +47,6 @@ Public Class MusicTechLauncher
         brwContent2.Navigate(path1 + "Home.html")
     End Sub
 
-
     Sub trvTreeview3_NodeMouseClick(ByVal sender As Object, ByVal e As TreeNodeMouseClickEventArgs)
         ' Node name will find the relevant HTML file and then open in browser
         tlsLessonName.Text = e.Node.Text
@@ -61,6 +60,7 @@ Public Class MusicTechLauncher
     End Sub
     Private Sub btnRefresh_Click(sender As Object, e As EventArgs) Handles btnRefresh.Click
         ' Refresh browser content
+        PopulateTreeView()
         brwContent2.Refresh()
     End Sub
     Private Sub PageNavigateToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PageNavigateToolStripMenuItem.Click
