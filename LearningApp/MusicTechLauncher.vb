@@ -41,27 +41,14 @@ Public Class MusicTechLauncher
     Private Sub MusicTechLauncher_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Refresh Form with Permissions
         FormRefresh()
+        PopulateTreeView()
 
         ' Set the home navigation page
         brwContent2.Navigate(path1 + "Home.html")
-
-        ' Find Directories
-        For Each directoryfound As String In My.Computer.FileSystem.GetDirectories(path1)
-            trvTreeview2.Nodes.Add(directoryfound.Replace(path1, ""))
-        Next
     End Sub
 
-    Sub trvTreeview2_NodeMouseClick(ByVal sender As Object, ByVal e As TreeNodeMouseClickEventArgs) Handles trvTreeview2.NodeMouseClick
-        ' Node name will find the relevant HTML file and then open in browser
-        trvTreeview3.Nodes.Clear()
 
-        ' Find Files
-        For Each foundFile As String In My.Computer.FileSystem.GetFiles(path1 + trvTreeview2.SelectedNode.Text).Where(Function(item) item.ToLower().EndsWith(".html"))
-            trvTreeview3.Nodes.Add(foundFile.Replace(path1 + trvTreeview2.SelectedNode.Text, ""))
-        Next
-    End Sub
-
-    Sub trvTreeview3_NodeMouseClick(ByVal sender As Object, ByVal e As TreeNodeMouseClickEventArgs) Handles trvTreeview3.NodeMouseClick
+    Sub trvTreeview3_NodeMouseClick(ByVal sender As Object, ByVal e As TreeNodeMouseClickEventArgs)
         ' Node name will find the relevant HTML file and then open in browser
         tlsLessonName.Text = e.Node.Text
         brwContent2.Navigate(path1 + trvTreeview2.SelectedNode.Text + e.Node.Text)
@@ -187,8 +174,6 @@ Public Class MusicTechLauncher
         myValue = InputBox("Add New Folder", "New Node", "")
         ' If user has clicked Cancel, set myValue to defaultValue 
         If myValue Is "" Then myValue = ""
-
-        trvTreeview2.Nodes.Add(myValue)
     End Sub
     Private Sub RemoveToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RemoveToolStripMenuItem.Click
         If trvTreeview2.SelectedNode.Text = "Home" Then
@@ -261,5 +246,71 @@ Public Class MusicTechLauncher
 
     Private Sub JSTestToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles JSTestToolStripMenuItem.Click
         brwContent2.Navigate("http://lab.hakim.se/reveal-js/#/")
+    End Sub
+    Private Sub PopulateTreeView()
+        Dim rootNode As TreeNode
+
+        Dim info As New DirectoryInfo("../..")
+        If info.Exists Then
+            rootNode = New TreeNode(info.Name)
+            rootNode.Tag = info
+            GetDirectories(info.GetDirectories(), rootNode)
+            trvTreeview2.Nodes.Add(rootNode)
+        End If
+
+    End Sub
+
+    Private Sub GetDirectories(ByVal subDirs() As DirectoryInfo,
+        ByVal nodeToAddTo As TreeNode)
+
+        Dim aNode As TreeNode
+        Dim subSubDirs() As DirectoryInfo
+        Dim subDir As DirectoryInfo
+        For Each subDir In subDirs
+            aNode = New TreeNode(subDir.Name, 0, 0)
+            aNode.Tag = subDir
+            aNode.ImageKey = "folder"
+            subSubDirs = subDir.GetDirectories()
+            If subSubDirs.Length <> 0 Then
+                GetDirectories(subSubDirs, aNode)
+            End If
+            nodeToAddTo.Nodes.Add(aNode)
+        Next subDir
+    End Sub
+    Private Sub treeView1_NodeMouseClick(ByVal sender As Object, ByVal e As TreeNodeMouseClickEventArgs) _
+        Handles trvTreeview2.NodeMouseClick
+
+        Dim newSelected As TreeNode = e.Node
+        ListView1.Items.Clear()
+        Dim nodeDirInfo As DirectoryInfo =
+        CType(newSelected.Tag, DirectoryInfo)
+        Dim subItems() As ListViewItem.ListViewSubItem
+        Dim item As ListViewItem = Nothing
+
+        Dim dir As DirectoryInfo
+        For Each dir In nodeDirInfo.GetDirectories()
+            item = New ListViewItem(dir.Name, 0)
+            subItems = New ListViewItem.ListViewSubItem() _
+                {New ListViewItem.ListViewSubItem(item, "Directory"),
+                New ListViewItem.ListViewSubItem(item,
+                dir.LastAccessTime.ToShortDateString())}
+
+            item.SubItems.AddRange(subItems)
+            ListView1.Items.Add(item)
+        Next dir
+        Dim file As FileInfo
+        For Each file In nodeDirInfo.GetFiles()
+            item = New ListViewItem(file.Name, 1)
+            subItems = New ListViewItem.ListViewSubItem() _
+                {New ListViewItem.ListViewSubItem(item, "File"),
+                New ListViewItem.ListViewSubItem(item,
+                file.LastAccessTime.ToShortDateString())}
+
+            item.SubItems.AddRange(subItems)
+            ListView1.Items.Add(item)
+        Next file
+
+        ListView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize)
+
     End Sub
 End Class
